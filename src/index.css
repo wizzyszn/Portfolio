@@ -6,7 +6,152 @@
   box-sizing: border-box;
   /*border: 1px  red solid; */
 }
-.home{
+/*.home{
   background-image: url('./images//mainBackground.jpg');
   background-repeat: repeat;
+} */
+.icon{
+  display: none;
+
 }
+.iconWrapper:hover .icon{
+  display: block;
+}
+
+.iconWrapper:hover .link{
+  transform: translate(15px) !important;
+
+}
+.link{
+  transition: transform 800ms ease-in-out ;
+}
+  /* Ensure the container only takes the space of the text */
+
+.fade-text {
+  background: linear-gradient(to top, transparent , #fff 30%);
+  -webkit-background-clip: text; /* Clip the text to the background */
+  background-clip: text;
+  color: transparent; /* Make the text transparent */
+ /* Adjust the font size as needed */ /* Add some padding to the bottom */
+}
+
+.fade-texts {
+  background: linear-gradient(to top, transparent , #fff -30%);
+  -webkit-background-clip: text; /* Clip the text to the background */
+  background-clip: text;
+  color: transparent; /* Make the text transparent */
+ /* Adjust the font size as needed */ /* Add some padding to the bottom */
+}
+.glitch {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+
+  animation: glitch 500ms infinite;
+}
+
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch span:first-child {
+  animation: glitch 650ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-0.025em, -0.0125em);
+  /* color: green; */
+  opacity: 0.8;
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
+  transform: translate(0.0125em, 0.025em);
+  /* color: red; */
+  opacity: 0.8;
+}
+
+/* https://web.dev/prefers-reduced-motion/#(bonus)-forcing-reduced-motion-on-all-websites */
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }}
+
+
+  /* Example styles for scrollbar customization */
+/* For Webkit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2a2a2a; /* Customize the thumb color */
+  border-radius: 5px; /* Customize the thumb border-radius */
+}
+
+::-webkit-scrollbar-track {
+  background-color: gray; /* Customize the track color */
+}
+.home{
+  background-image: url('../src//images/backgroundImage.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+/* For Firefox */
+/* You can use scrollbar-width and scrollbar-color properties in Firefox */
+/* Example: */
+/* scrollbar-width: thin; */
+/* scrollbar-color: #4a90e2 #f0f0f0; */

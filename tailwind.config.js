@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      display: [ 'Acme', 'serif', 'Nunito', 'sans-serif']
+      display: [ 'Montserrat', 'serif', 'Nunito', 'sans-serif']
     },
   },
   plugins: [],
