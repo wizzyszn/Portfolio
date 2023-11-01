@@ -29,17 +29,13 @@ function Projects () {
           <div className='rounded-b-lg mt-2 border border-[#4e4c4c18] h-[25em] '>
             <div className='flex flex-col gap-4 p-3'>
               {projectUtils.map(project => {
-                if (project.id === 3 || project.id === 4) {
-                  
-                  
-                }
                 return (
                   <Link   key={project.id}>
                     <motion.div variants={textVariant}
                       className=' relative'
                     
                     >
-                      <div className={project.id ===3 || project.id ===4 ?'flex flex-col gap-3 border border-[#4e4c4c18] rounded-lg p-2 cursor-not-allowed':'flex flex-col gap-3 border border-[#4e4c4c18] rounded-lg p-2'}>
+                      <div className={project.id ===3 || project.id ===4 ?'flex flex-col gap-3 border border-[#4e4c4c18] rounded-lg p-2 cursor-not-allowed ':'flex flex-col gap-3 border border-[#4e4c4c18] rounded-lg p-2'}>
                         <div className='absolute  bottom-4 left-6 bg-[#2a2a2a] p-3 rounded-md'>
                         <BsStack
                           size='20px'
