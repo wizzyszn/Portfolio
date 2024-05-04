@@ -22,7 +22,7 @@ function Projects () {
                className='text-lg font-bold'>Featured Projects</motion.h1>
               <motion.div variants={textVariant}
               className='bg-[#2a2a2a] p-1 rounded-lg text-sm cursor-pointer'>
-                <p className='text-gray-300'>View All</p>
+                <p className='text-gray-300 cursor-not-allowed '>View All</p>
               </motion.div>
             </div>
           </div>
