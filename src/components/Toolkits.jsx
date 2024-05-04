@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import {useAnimationContext} from '../hooks/useAnimations'
+import expressIcon from '../images/icons8-express-js-256.png'
+import viteIcon from '../images/Vitejs-logo.svg.png'
 function Toolkits() {
     const {containerVariants, textVariant} = useAnimationContext()
     return (  <>
@@ -22,16 +24,19 @@ function Toolkits() {
                     <div className="w-8 flex flex-col  gap-y-2 justify-center place-items-center"><img src="/images/python.png"   alt="" /><p className=" text-xs font-normal text-center tracking-tighter">PYTHON</p></div>
                     <div className="w-8 flex flex-col  gap-y-2 justify-center place-items-center"><img src="/images/tailwind.png"   alt="" /><p className=" text-xs font-normal text-center tracking-tighter">TAILWIND</p></div>
                     <div className="w-8 flex flex-col  gap-y-2 justify-center place-items-center"><img src="/images/git.png"   alt="" /><p className=" text-xs font-normal text-center tracking-tighter">GIT</p></div>
-                
+                    <div className="w-8 flex flex-col  gap-y-2 justify-center place-items-center whitespace-nowrap"><img src="/images/node.png" alt=""  /><p className="text-xs font-normal text-center tracking-tighter">NODE JS</p></div>
+                    <div className="w-4 flex flex-col  gap-y-2 justify-center place-items-center whitespace-nowrap"><img src="/images/mongoose.png" alt="" className=""  /><p className="text-xs font-normal text-center tracking-tighter">MONGO DB</p></div>      
+                    <div className="w-8 flex flex-col  gap-y-2 justify-center place-items-center whitespace-nowrap"><img src={expressIcon} alt="" className=""  /><p className="text-xs font-normal text-center tracking-tighter">EXPRESS JS</p></div>      
+                    <div className="w-8 flex flex-col  gap-y-2 justify-center place-items-center whitespace-nowrap"><img src={viteIcon} alt="" className=""  /><p className="text-xs font-normal text-center tracking-tighter">VITE</p></div>      
             </div>
+            { /*
             <div className=" mt-4 flex flex-col">
                 <h1 className=" font-bold text-sm tracking-normal text-center border-b border-[rgba(78,76,76,0.09)] ">LEARNING</h1>
                 <div className=" grid grid-cols-4 gap-x-9 max-[768px]:grid-cols-2 place-items-center mt-2 ">
-                    <div className="w-8 flex flex-col  gap-y-2 justify-center place-items-center whitespace-nowrap"><img src="/images/node.png" alt=""  /><p className="text-xs font-normal text-center tracking-tighter">NODE JS</p></div>
-                    <div className="w-4 flex flex-col  gap-y-2 justify-center place-items-center whitespace-nowrap"><img src="/images/mongoose.png" alt="" className=""  /><p className="text-xs font-normal text-center tracking-tighter">MONGO DB</p></div>
-                </div>
-            </div>
-            
+                          </div>
+            </div> 
+            */}
+
             
         </motion.div>
     </motion.div>

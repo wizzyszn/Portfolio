@@ -15,7 +15,7 @@ function Profile() {
             <motion.h2 variants={textVariant}
              > Wisdom Olubayo</motion.h2>
             <motion.p variants={textVariant}
-             className="text-sm font-thin text-gray-200">Front End Web Developer. Nigeria</motion.p>
+             className="text-sm font-thin text-gray-200">Front End Web Developer. </motion.p>
             
         </div>  
 

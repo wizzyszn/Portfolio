@@ -53,5 +53,4 @@ function AnimationContext ({ children }) {
     </>
   )
 }
-
 export default AnimationContext

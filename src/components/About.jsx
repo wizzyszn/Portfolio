@@ -27,8 +27,8 @@ function About () {
     <>
       <motion.div variants={containerVariants}
       className=' col-span-5'>
-        <div className=' text-white bg-[#1c1c1c] rounded-2xl min-w-[100%] font-bold text-lg text-gray  border border-[#363636]  min-h-[20em] '>
-          <div className=' flex flex-col gap-y-5 p-5 bg-gradient-to-t from-transparent via-transparent to-white text-transparent bg-clip-text'>
+        <div className=' text-white bg-[#1c1c1c] rounded-2xl font-bold text-lg text-gray  border border-[#363636]  min-h-[20em] '>
+          <div className=' flex flex-col gap-y-4 p-4 bg-gradient-to-t from-transparent via-transparent to-white text-transparent bg-clip-text'>
             <motion.div variants={textVariant}
             className=''>
               <h1 className=" before:content-[url('./images/wave.gif')] before:mr-1 text-gray-300 text-bold text-4xl">Hey there! I’m Wisdom </h1>
@@ -47,7 +47,7 @@ function About () {
               in the ever-evolving world of web development.
             </motion.p>
             <motion.div variants={textVariant} whileHover={{ scale : 1.1}}
-            className=' flex font-normal cursor-pointer place-items-center gap-1 text-md justify-center text-black bg-white w-[40%]  rounded-md p-1 max-[768px]:text-sm  flex-nowrap mt-2' onClick={handleClick}>
+            className=' flex font-normal cursor-pointer place-items-center gap-1 text-md justify-center text-black bg-white w-[40%]  rounded-md max-[768px]:text-sm  flex-nowrap mt-2' onClick={handleClick}>
               <HiDownload className='w-6 ' /> <p className=' tracking-tight'>Download Resume</p>
             </motion.div>
             {

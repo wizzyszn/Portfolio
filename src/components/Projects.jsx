@@ -3,10 +3,10 @@ import { BsStack } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 import {useAnimationContext} from '../hooks/useAnimations'
 const projectUtils = [
-  { title: 'AtSu Web', tech: 'Front End Web Design', id: 1 },
-  { title: 'E-commerce', tech: 'MERN Stack', id: 2 },
-  { title: 'Project Name', tech: 'Technology', id: 3 },
-  { title: 'Project Name', tech: 'Technology', id: 4 },
+  { title: 'AtSu Web', tech: 'Front End Figma Design', id: 1 , link: 'https://www.figma.com/file/1KWtTprmNXhTod2bo5Wfsp/Atsu-Vite-Design?type=design&node-id=0%3A1&mode=design&t=mTQUcUbeeztH0iH5-1'},
+  { title: 'Bytandym', tech: 'Front End', id: 2 },
+  { title: 'Chat Application', tech: 'MERN', id: 3, link : "https://github.com/wizzyszn/MERN-chat-application.git" },
+  
 
 ]
 function Projects () {
@@ -30,12 +30,11 @@ function Projects () {
             <div className='flex flex-col gap-4 p-3'>
               {projectUtils.map(project => {
                 return (
-                  <Link   key={project.id}>
+                  <a  href={project.link} target='_blank' rel='noopener'  key={project.id}>
                     <motion.div variants={textVariant}
                       className=' relative'
-                    
                     >
-                      <div className={project.id ===3 || project.id ===4 ?'flex flex-col gap-3 border border-[#4e4c4c18] rounded-lg p-2 cursor-not-allowed ':'flex flex-col gap-3 border border-[#4e4c4c18] rounded-lg p-2'}>
+                      <div className='flex flex-col gap-3 border border-[#4e4c4c18] rounded-lg p-2'>
                         <div className='absolute  bottom-4 left-6 bg-[#2a2a2a] p-3 rounded-md'>
                         <BsStack
                           size='20px'
@@ -46,7 +45,7 @@ function Projects () {
                         <p className=' text-gray-300 ml-20'>{project.tech}</p>
                       </div>
                     </motion.div>
-                  </Link>
+                  </a>
                 )
               })}
             </div>

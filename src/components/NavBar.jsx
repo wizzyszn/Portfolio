@@ -81,28 +81,6 @@ function NavBar () {
           </div>
           <div className='py-1'>
             <NavLink
-              to='/Projects'
-              className={({ isActive }) => {
-                console.log(isActive)
-                if (isActive) {
-                  return (
-                    activeLink +
-                    ' flex place-items-center gap-1 px-2 rounded-md hover:bg-[#2a2a2a]  font-bold duration-500 ease-in-out py-2' 
-                  )
-                } else {
-                  return (
-                    notActiveLink +
-                    ' flex place-items-center gap-1 px-2 rounded-md hover:bg-[#2a2a2a]  duration-500 ease-in-out py-2'
-                  )
-                }
-              }}
-            >
-              <PiBagSimpleThin className='' size='20px' />
-              Projects
-            </NavLink>
-          </div>
-          <div className='py-1'>
-            <NavLink
               to='/About-Me'
               className={({ isActive }) => {
                 console.log(isActive)
