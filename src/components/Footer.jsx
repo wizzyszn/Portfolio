@@ -29,8 +29,8 @@ function Footer() {
         <motion.div variants={textVariant}  
         className="flex gap-x-5 min-[768px]:ml-12 p-3">
         <a href='https://twitter.com/@WisdomOlubayo' target='_blank' rel="noreferrer"> <motion.div variants={logoVariants} whileHover='hover' className=' bg-[#2a2a2a] p-4 rounded-lg cursor-pointer border border-[#4e4c4c3c]'><Icon1 fill="white"/> </motion.div></a>
-            <motion.div   variants={logoVariants} whileHover='hover'className=' bg-[#2a2a2a] p-4 rounded-lg cursor-pointer border border-[#4e4c4c3c]'><Link><Icon2 fill = "white" /> </Link></motion.div>
-            <motion.div  variants={logoVariants} whileHover='hover' className=' bg-[#2a2a2a] p-4 rounded-lg cursor-pointer border border-[#4e4c4c3c]'><Link><Icon3  fill ="white" /></Link></motion.div>
+            <motion.div   variants={logoVariants} whileHover='hover'className=' bg-[#2a2a2a] p-4 rounded-lg cursor-pointer border border-[#4e4c4c3c] cursor-not-allowed'><Link><Icon2 fill = "white" /> </Link></motion.div>
+            <motion.div  variants={logoVariants} whileHover='hover' className=' bg-[#2a2a2a] p-4 rounded-lg cursor-pointer border border-[#4e4c4c3c] cursor-not-allowed'><Link><Icon3  fill ="white" /></Link></motion.div>
         <a href='https://wa.me/2349057469542' target='_blank' rel="noreferrer"><motion.div  variants={logoVariants} whileHover='hover' className=' bg-[#2a2a2a] p-4 rounded-lg cursor-pointer border border-[#4e4c4c3c]'><Icon4 fill= "white"/></motion.div></a>
         </motion.div>
       </div>
