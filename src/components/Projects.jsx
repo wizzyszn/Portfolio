@@ -6,6 +6,7 @@ const projectUtils = [
   { title: 'AtSu Web', tech: 'Front End Figma Design', id: 1 , link: 'https://www.figma.com/file/1KWtTprmNXhTod2bo5Wfsp/Atsu-Vite-Design?type=design&node-id=0%3A1&mode=design&t=mTQUcUbeeztH0iH5-1'},
   { title: 'Bytandym', tech: 'Front End', id: 2, link : "https://bytandym-n9wd.vercel.app" },
   { title: 'Chat Application', tech: 'MERN', id: 3, link : "https://github.com/wizzyszn/MERN-chat-application.git" },
+   { title: 'Coutney-Lanka', tech: 'Front End', id: 4, link : "https://courtney-lanka-five.vercel.app/" },
   
 
 ]
