@@ -17,7 +17,7 @@ import {useAnimationContext} from '../hooks/useAnimations'
     <>
       <motion.div  variants={homeVariant} animate='visible' initial='hidden'
        className=' h-[100vh] bg-[#141313] font-display max-[720px]:h-[100%] max-[768px]:pb-7 overflow-hidden '>
-        <div className=' wrapper w-[60%] ml-auto mr-auto grid grid-cols-9 gap-x-5 gap-y-4 max-[720px]:flex max-[720px]:flex-col max-[720px]:w-[90%] relative'>
+        <div className=' wrapper w-[60%] ml-auto mr-auto grid grid-cols-9 gap-x-4 gap-y-4 max-[720px]:flex max-[720px]:flex-col max-[720px]:w-[90%] relative'>
           <NavBarContext>
             <NavBar/>
             <NavBarExtension />

@@ -5,6 +5,7 @@ import Icon3 from './svgComponents/Icon3';
 import Icon4 from './svgComponents/Icon4';
 import {motion} from 'framer-motion'
 import {useAnimationContext} from '../hooks/useAnimations'
+import { VscGithubInverted } from "react-icons/vsc";
 
 function Footer() {
   const { containerVariants, textVariant} = useAnimationContext()
@@ -29,8 +30,8 @@ function Footer() {
         <motion.div variants={textVariant}  
         className="flex gap-x-5 min-[768px]:ml-12 p-3">
         <a href='https://twitter.com/@WisdomOlubayo' target='_blank' rel="noreferrer"> <motion.div variants={logoVariants} whileHover='hover' className=' bg-[#2a2a2a] p-4 rounded-lg cursor-pointer border border-[#4e4c4c3c]'><Icon1 fill="white"/> </motion.div></a>
-            <motion.div   variants={logoVariants} whileHover='hover'className=' bg-[#2a2a2a] p-4 rounded-lg cursor-pointer border border-[#4e4c4c3c] cursor-not-allowed'><Link><Icon2 fill = "white" /> </Link></motion.div>
-            <motion.div  variants={logoVariants} whileHover='hover' className=' bg-[#2a2a2a] p-4 rounded-lg cursor-pointer border border-[#4e4c4c3c] cursor-not-allowed'><Link><Icon3  fill ="white" /></Link></motion.div>
+            <a href='https://github.com/wizzyszn' target='_blank' rel="noreferrer"><motion.div   variants={logoVariants} whileHover='hover'className=' bg-[#2a2a2a] p-4 rounded-lg cursor-pointer border border-[#4e4c4c3c] cursor-not-allowed'><VscGithubInverted size={30} /></motion.div></a>
+            <motion.div  variants={logoVariants} whileHover='hover' className=' bg-[#2a2a2a] p-4 rounded-lg  border border-[#4e4c4c3c] cursor-not-allowed '><Link><Icon3  fill ="white" /></Link></motion.div>
         <a href='https://wa.me/2349057469542' target='_blank' rel="noreferrer"><motion.div  variants={logoVariants} whileHover='hover' className=' bg-[#2a2a2a] p-4 rounded-lg cursor-pointer border border-[#4e4c4c3c]'><Icon4 fill= "white"/></motion.div></a>
         </motion.div>
       </div>

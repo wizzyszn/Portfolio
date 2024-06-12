@@ -15,7 +15,7 @@ function AnimationContext ({ children }) {
         duration: 0.4,
         ease: 'easeIn',
         delayChildren: 0.5,
-        staggerChildren: 0.4
+        staggerChildren: 0.4,
       }
     }
   }

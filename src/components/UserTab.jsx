@@ -33,10 +33,10 @@ function UserTab () {
     }
   ]
   const Certificates = [
-    {Title : 'Certificate title',skill :'Python', id : 0},
-    {Title : 'Certificate title',skill : 'Javascript', id : 1},
-    {Title : 'Certificate title',skill : 'WebFlow', id : 2},
-    {Title : 'Certificate title',skill : 'WebFlow', id : 3},
+    {Title : 'Python Programming Essentials',skill :'Python', id : 0, link : 'https://www.credly.com/badges/c3ef86c4-26f6-458d-b7b9-17ae1a1748dd'},
+    {Title : 'JavaScript Programming Essentials',skill : 'Javascript', id : 1, link : 'https://www.credly.com/badges/6314d562-d9c9-4d01-891c-5a56123fe119'},
+    {Title : 'Fundamental Design with Webflow',skill : 'WebFlow', id : 2, link: null},
+
   ]
   const updateToggle = (id) => {
     dispatch({type : id})
@@ -74,7 +74,7 @@ function UserTab () {
                   <h1 className=" ml-14 font-bold "> {education.university}</h1>
                   <p className="ml-14 text-gray-400">{education.course}</p>
                 </div>
-                <div className="bg-[#17171721] p-2 border border-[#4e4c4c18] relative">
+                <div className="bg-[#17171721] p-2 border border-[#4e4c4c18] relative ">
                 <div className=" absolute  bg-[#2a2a2a] p-2 rounded-sm top-3">
                   <RiGraduationCapLine size={20}/>
                   </div>
@@ -88,8 +88,12 @@ function UserTab () {
             }
             {Certificates.map((certificate) => {
               return (
-              
-                <div key={certificate.id} className={display === 2 ? ' flex flex-col mt-2 p-4 border border-[#4e4c4c18]': 'hidden'}>
+              <a href={certificate.link} target="_blank">
+                   <div key={certificate.id} className={display === 2 ? ' flex flex-col mt-2 p-4 border border-[#4e4c4c18] hover:bg-[#363636] cursor-pointer': 'hidden' }
+                   style={{
+                    cursor: certificate.link ? 'not-allowed': 'not-allowed'
+                   }}
+                   >
                   <div className=" bg-[#17171721] p-2 border border-[#4e4c4c18] relative"> 
                   <div className=" absolute  bg-[#2a2a2a] p-2 rounded-sm top-3">
                     <LiaCertificateSolid  size={20}/>
@@ -99,6 +103,9 @@ function UserTab () {
                   </div>
 
                 </div>
+
+              </a>
+             
               )
 
             })

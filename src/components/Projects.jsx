@@ -2,16 +2,29 @@ import { Link } from 'react-router-dom'
 import { BsStack } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 import {useAnimationContext} from '../hooks/useAnimations'
-const projectUtils = [
-  { title: 'AtSu Web', tech: 'Front End Figma Design', id: 1 , link: 'https://www.figma.com/file/1KWtTprmNXhTod2bo5Wfsp/Atsu-Vite-Design?type=design&node-id=0%3A1&mode=design&t=mTQUcUbeeztH0iH5-1'},
-  { title: 'Bytandym', tech: 'Front End', id: 2, link : "https://bytandym-n9wd.vercel.app" },
-  { title: 'Chat Application', tech: 'MERN', id: 3, link : "https://github.com/wizzyszn/MERN-chat-application.git" },
-   { title: 'Coutney-Lanka', tech: 'Front End', id: 4, link : "https://courtney-lanka-five.vercel.app/" },
-  
-
-]
+import {useEffect, useState} from 'react'
 function Projects () {
-  const {containerVariants, textVariant} = useAnimationContext()
+  const {containerVariants, textVariant} = useAnimationContext();
+  const [error, setError] = useState(null);
+  const [pending, setPending] = useState(false);
+  const [portfolios, setPortfolios] = useState([]);
+  useEffect(()=>{
+    const makeRequest = async () =>{
+      try{
+        setPending(true)
+        const response =await fetch(`http://localhost:5000/api/portfolio/get-portfolios`);
+        const data  = await response.json();
+        console.log("data", data)
+        if(!response.ok) throw new Error({message : "Something went wrong"})
+        setPortfolios(data);
+      }catch(err){
+        console.log(err);
+        setError(err.message)
+      }
+
+    }
+    makeRequest()
+  }, [])
   return (
     <>
       <motion.div variants={containerVariants}
@@ -21,32 +34,26 @@ function Projects () {
             <div className='flex justify-between p-2 border border-[#4e4c4c18] rounded-t-lg'>
               <motion.h1 variants={textVariant}
                className='text-lg font-bold'>Featured Projects</motion.h1>
-              <motion.div variants={textVariant}
-              className='bg-[#2a2a2a] p-1 rounded-lg text-sm cursor-pointer'>
-                <p className='text-gray-300 cursor-not-allowed '>View All</p>
-              </motion.div>
             </div>
           </div>
           <div className='rounded-b-lg mt-2 border border-[#4e4c4c18] h-[25em] '>
             <div className='flex flex-col gap-4 p-3'>
-              {projectUtils.map(project => {
+              {portfolios.map(portfolio => {
                 return (
-                  <a  href={project.link} target='_blank' rel='noopener'  key={project.id}>
+                  <Link to= {`/project/${portfolio?._id}`}  target='_blank' rel='noopener'  key={portfolio?.id}>
                     <motion.div variants={textVariant}
                       className=' relative'
                     >
-                      <div className='flex flex-col gap-3 border border-[#4e4c4c18] rounded-lg p-2'>
-                        <div className='absolute  bottom-4 left-6 bg-[#2a2a2a] p-3 rounded-md'>
+                      <div className='flex border border-[#4e4c4c18] rounded-lg p-2 gap-5 items-center hover:bg-[#363636]'>
+                        <div className=' bg-[#2a2a2a] p-3 rounded-md'>
                         <BsStack
                           size='20px'
                         />
                         </div>
-                        
-                        <h1 className='font-bold ml-20'>{project.title}</h1>
-                        <p className=' text-gray-300 ml-20'>{project.tech}</p>
+                        <h1 className='font-semi-bold'>{portfolio?.title}</h1>
                       </div>
                     </motion.div>
-                  </a>
+                  </Link>
                 )
               })}
             </div>

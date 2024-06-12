@@ -7,8 +7,13 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      display: [ 'Montserrat', 'serif', 'Nunito', 'sans-serif']
+      display: [ 'Montserrat', 'serif', 'Nunito', 'sans-serif'],
     },
+    extend : {
+      gridTemplateRows : {
+        "100px" : "100px"
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 }

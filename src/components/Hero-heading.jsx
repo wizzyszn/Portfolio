@@ -4,7 +4,7 @@ function HeroHeading () {
 
   const {containerVariants,textVariant} = useAnimationContext()
 
-  const text = 'Designing for the Human Experience, Web Developer @WizzySzn'
+  const text = 'Designing for the Human Experience, Web Engineer @WizzySzn'
   return (
     <>
       <motion.div className=' col-span-5' variants={containerVariants}
